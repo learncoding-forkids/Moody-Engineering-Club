@@ -258,19 +258,19 @@ html, body {
   );
 }
 
-.hero-logo-overlay { 
-    position: absolute; 
-    left: 60%; 
-    top: 14%; 
-    width: 450px; 
-    height: 450px; 
-    background-image: url("Images/image.png"); 
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    z-index: 3; 
-    opacity: 0.9; 
-    pointer-events: none; 
+.hero-logo-overlay {
+  position: absolute;
+  left: 60%;
+  top: 14%;
+  width: 450px;
+  height: 450px;
+  background-image: url("Images/image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  opacity: 1;
+  pointer-events: none;
 }
 
 .hero-maroon-angle {
