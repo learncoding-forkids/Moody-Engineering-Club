@@ -264,15 +264,17 @@ html, body {
   top: 14%;
   width: 450px;
   height: 450px;
-  background-image: url("Images/image copy.png");
+
+  background-image: url("https://learncoding-for-kids.github.io/Moody-Engineering-Club/Images/image%20copy.png");
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 3;
-  opacity: 0.9;
+
+  z-index: 10;
+  opacity: 1;
   pointer-events: none;
 }
-
 /* MAROON ANGLE */
 /* GOLD BORDER */
 /* GOLD BORDER — THICKER + ALIGNED WITH MAROON */
