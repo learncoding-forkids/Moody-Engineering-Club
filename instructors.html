@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Engineering Club | Instructors</title>
-  <link rel="icon" type="image/png" href="Images/image copy 2.png" />
+  <link rel="icon" type="image/png" href="image copy 10.png" />
+  <link rel="shortcut icon" href="image copy 10.png" />
   <link rel="stylesheet" href="index.css" />
 </head>
 <body class="instructors-page">
   <header class="site-header">
     <nav class="navbar">
       <div class="brand">
-        <img src="Images/image copy 2.png" alt="Engineering Club logo" class="brand-logo">
+        <img src="image copy 10.png" alt="Engineering Club logo" class="brand-logo">
         <div class="brand-text">
           <div class="logo">ENGINEERING CLUB</div>
           <div class="nav-tagline">Build the Future with Engineering</div>
@@ -24,7 +25,7 @@
         <a href="competitions.html">COMPETITIONS</a>
 
         <div class="dropdown">
-          <button class="dropbtn" type="button">SECTORS</button>
+          <button class="dropbtn" type="button" aria-expanded="false">SECTORS</button>
           <div class="dropdown-content">
             <a href="sector-software.html">Software Engineering</a>
             <a href="sector-mechanical.html">Mechanical Engineering</a>
@@ -47,7 +48,7 @@
       <a class="home-link" href="index.html">Home</a>
     </header>
 
-    <section class="instructors-grid">
+    <section class="instructors-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;">
       <article class="instructor-card">
         <div class="instructor-photo">
           <span>Insert Photo</span>
@@ -76,8 +77,20 @@
         <div class="instructor-photo">
           <span>Insert Photo</span>
         </div>
-        <h2>Shreyan Arora</h2>
-        <p class="instructor-role">Instructor for Design</p>
+        <h2>Taran Ravela</h2>
+        <p class="instructor-role">Instructor for Electrical Engineering</p>
+        <p class="instructor-bio">
+          Add a short bio here describing the instructor's background, expertise,
+          and contribution to the club.
+        </p>
+      </article>
+
+      <article class="instructor-card">
+        <div class="instructor-photo">
+          <span>Insert Photo</span>
+        </div>
+        <h2>Sebastion Jiminez</h2>
+        <p class="instructor-role">Instructor for Electrical Engineering</p>
         <p class="instructor-bio">
           Add a short bio here describing the instructor's background, expertise,
           and contribution to the club.
@@ -112,30 +125,6 @@
         <div class="instructor-photo">
           <span>Insert Photo</span>
         </div>
-        <h2>Abeer Shah</h2>
-        <p class="instructor-role">Instructor for Electrical Engineering</p>
-        <p class="instructor-bio">
-          Add a short bio here describing the instructor's background, expertise,
-          and contribution to the club.
-        </p>
-      </article>
-
-      <article class="instructor-card">
-        <div class="instructor-photo">
-          <span>Insert Photo</span>
-        </div>
-        <h2>Sebastion Jiminez</h2>
-        <p class="instructor-role">Instructor for Electrical Engineering</p>
-        <p class="instructor-bio">
-          Add a short bio here describing the instructor's background, expertise,
-          and contribution to the club.
-        </p>
-      </article>
-
-      <article class="instructor-card">
-        <div class="instructor-photo">
-          <span>Insert Photo</span>
-        </div>
         <h2>Ethan Kim</h2>
         <p class="instructor-role">Instructor for Mechanical Engineering</p>
         <p class="instructor-bio">
@@ -155,7 +144,11 @@
           and contribution to the club.
         </p>
       </article>
+
+      <!-- Removed extra instructor to keep total at 8 -->
     </section>
   </div>
+  <script src="js/dropdown.js" defer></script>
 </body>
 </html>
+
