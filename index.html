@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Club | The Future is Engineering</title>
 
-    <link rel="icon" type="image/png" href="Images/image copy 2.png">
+    <link rel="icon" type="image/png" href="image copy 10.png" />
+    <link rel="shortcut icon" href="image%20copy%202.png" />
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -14,14 +15,20 @@
 
 <body>
     <header class="site-header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="brand">
-                <img src="Images/image copy 2.png" alt="Engineering Club logo" class="brand-logo">
+                <img src="image copy 2.png" alt="Engineering Club logo" class="brand-logo">
                 <div class="brand-text">
                     <div class="logo">ENGINEERING CLUB</div>
                     <div class="nav-tagline">Build the Future with Engineering</div>
                 </div>
             </div>
+
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <div class="nav-links">
                 <a href="index.html" class="active">HOME</a>
@@ -29,7 +36,7 @@
                 <a href="competitions.html">COMPETITIONS</a>
 
                 <div class="dropdown">
-                    <button class="dropbtn" type="button">SECTORS</button>
+                    <button class="dropbtn" type="button" aria-expanded="false">SECTORS</button>
                     <div class="dropdown-content">
                         <a href="sector-software.html">Software Engineering</a>
                         <a href="sector-mechanical.html">Mechanical Engineering</a>
@@ -43,8 +50,7 @@
             </div>
 
             <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScV3WO7fNltE-Z-H5qhLEWNsde5Ds_ttvBy6Anmg3D_L4OeaA/viewform?usp=header" target="_blank" rel="noopener noreferrer">REGISTER</a>
-
-                
+        </nav>
     </header>
 
 <main class="hero" id="home">
@@ -60,15 +66,12 @@
     SOFTWARE <span>•</span> MECHANICAL <span>•</span> ELECTRICAL <span>•</span> DESIGN
   </div>
 
-  <div class="hero-slogan">
-    <span class="slogan-dark">BUILD TOMORROW</span>
-    <span class="slogan-gold">ENGINEER THE FUTURE</span>
-</div>
+  
 
   <div class="schedule-info">
     <div class="schedule-line">
         <i class="fa-regular fa-calendar"></i>
-        <span>WEDNESDAY | 3:30-4:30 | LIBRARY</span>
+        <span>Tuesday | 3:30-4:30 | LIBRARY | Every 2 Weeks</span>
     </div>
     <div class="schedule-text">Weekly Meetings</div>
   </div>
@@ -93,8 +96,8 @@
     </div>
     <div class="footer-credit">Developed by Saleel Khisti</div>
   </div>
-</footer>
-   
-</body>
+  </footer>
+  <script src="js/dropdown.js" defer></script>
+  </body>
 
 </html>
