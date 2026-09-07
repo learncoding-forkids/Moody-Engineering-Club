@@ -45,8 +45,8 @@ html, body {
 
 /* LOGO IMAGE */
 .brand-logo {
-    width: 65px;
-    height: 65px;
+  width: 90px;
+  height: 90px;
     object-fit: contain;
 }
 
@@ -120,7 +120,7 @@ html, body {
     right: 0;
     bottom: -8px;
     height: 2px;
-    background: var(--gold);
+    background: var(--black);
 }
 
 /* HOVER */
@@ -167,6 +167,11 @@ html, body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* show dropdown when toggled via JS */
+.dropdown.open .dropdown-content {
+  display: block;
 }
 
 /* JOIN TODAY BUTTON */
@@ -217,6 +222,11 @@ html, body {
         font-size: 1.2rem;
     }
 
+    .brand-logo {
+      width: 60px;
+      height: 60px;
+    }
+
     .nav-tagline {
         font-size: 0.55rem;
     }
@@ -224,6 +234,130 @@ html, body {
     .nav-cta {
         margin-left: 15px;
         padding: 10px 16px;
+    }
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--black);
+    border-radius: 2px;
+    transition: 0.2s ease;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        height: auto;
+        min-height: 72px;
+    }
+
+    .hero-image,
+    .hero-maroon-angle,
+    .hero-logo-overlay {
+        display: none;
+    }
+
+    .navbar {
+        position: relative;
+        min-height: 72px;
+        padding: 0 16px;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        margin-right: 0;
+        padding-right: 0;
+        gap: 8px;
+    }
+
+    .brand-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+        letter-spacing: 0.03em;
+    }
+
+    .nav-tagline {
+        display: none;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 16px 18px;
+        background: rgba(255, 255, 255, 0.98);
+        border-top: 1px solid rgba(106, 15, 29, 0.12);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar.mobile-open .nav-links {
+        display: flex;
+    }
+
+    .nav-links a,
+    .dropbtn {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 4px 0;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        min-width: 100%;
+        margin-top: 8px;
+        box-shadow: none;
+        border-top: 1px solid rgba(106, 15, 29, 0.12);
+    }
+
+    .navbar.mobile-open .mobile-menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar.mobile-open .mobile-menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.mobile-open .mobile-menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
     }
 }
 /* MAROON */
@@ -243,7 +377,7 @@ html, body {
   width: 110%;
   height: 100%;
 
-  background-image: url("Images/image copy 5.png");
+  background-image: url("image copy 5.png");
   background-size: cover;
   background-position: center;
 
@@ -264,15 +398,19 @@ html, body {
   top: 14%;
   width: 450px;
   height: 450px;
-  background-image: url("Images/image.png");
+  background-image: url("image copy.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 10;
-  opacity: 1;
+  z-index: 3;
+  opacity: 0.9;
   pointer-events: none;
 }
 
+/* MAROON ANGLE */
+/* GOLD BORDER */
+/* GOLD BORDER — THICKER + ALIGNED WITH MAROON */
+/* MAROON BORDER */
 .hero-maroon-angle {
   position: absolute;
   inset: 0;
@@ -668,8 +806,14 @@ html, body {
 
 .instructors-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
+}
+
+@media (max-width: 700px) {
+  .instructors-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .instructor-card {
